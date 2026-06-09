@@ -29,15 +29,30 @@ document.addEventListener('DOMContentLoaded', () => {
     window.toggleProjectDetail = function(projectId) {
         const container = document.getElementById('portfolio-container');
         const allCases = document.querySelectorAll('.project-case-study');
-        
-        allCases.forEach(c => c.classList.remove('active-case'));
-        
         const targetCase = document.getElementById('detail-' + projectId);
-        if (targetCase) {
-            targetCase.classList.add('active-case');
-        }
+        
+        document.querySelectorAll('.sub-link').forEach(link => {
+            link.classList.remove('active-sub');
+        });
+        const activeLink = document.getElementById('sublink-' + projectId);
+        if (activeLink) activeLink.classList.add('active-sub');
 
-        container.classList.add('case-study-active');
+        if (container.classList.contains('case-study-active')) {
+            allCases.forEach(c => c.classList.remove('active-case'));
+            
+            setTimeout(() => {
+                if (targetCase) {
+                    targetCase.classList.add('active-case');
+                    const scrollArea = targetCase.querySelector('.case-content');
+                    if (scrollArea) scrollArea.scrollTop = 0;
+                }
+            }, 400); 
+
+        } else {
+            allCases.forEach(c => c.classList.remove('active-case'));
+            if (targetCase) targetCase.classList.add('active-case');
+            container.classList.add('case-study-active');
+        }
     };
 
     window.closeCaseStudy = function() {
@@ -80,7 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 2. Onda visual
     document.addEventListener('click', (e) => {
         const clickX = e.clientX;
         const clickY = e.clientY;

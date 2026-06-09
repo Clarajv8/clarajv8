@@ -99,10 +99,6 @@
                             </div>
                         </div>
                         <div class="case-content">
-                            <button class="back-btn" onclick="closeCaseStudy()">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-                                Volver a Proyectos
-                            </button>
                             <h3>Tarantino Expo</h3>
                             <span class="case-tags">UX Research • User Flow • UI Design • Figma</span>
                             
@@ -129,16 +125,14 @@
                     </div>
 
                     <div id="detail-bakeneko" class="project-case-study">
+            
                         <div class="case-sidebar">
                             <div class="project-image-placeholder vertical-img case-main-img">
                                 <img src="assets/bakeneko.jpg" alt="Bakeneko Bakery" class="card-img">
                             </div>
                         </div>
+
                         <div class="case-content">
-                            <button class="back-btn" onclick="closeCaseStudy()">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-                                Volver a Proyectos
-                            </button>
                             <h3>Bakeneko Bakery</h3>
                             <span class="case-tags">HTML5 Semántico • CSS3 (Grid/Flexbox) • JS ES6</span>
                             
@@ -150,7 +144,7 @@
                                         <h4>1. Estructura & Semántica</h4>
                                         <p>Maquetación con código limpio y modular (Metodología BEM). Uso estricto de etiquetas HTML5 semánticas para mejorar la accesibilidad y el posicionamiento en buscadores.</p>
                                     </div>
-                                    <div class="zig-zag-img"><img src="assets/bakeneko-code.jpg" alt="Código HTML/CSS"></div>
+                                    <div class="zig-zag-img"><img src="assets/bakeneko-code.jpg" alt="Código"></div>
                                 </div>
 
                                 <div class="zig-zag-row reverse">
@@ -158,23 +152,35 @@
                                         <h4>2. Responsive & Micro-interacciones</h4>
                                         <p>Despliegue fluido mediante CSS Grid. Programación en Vanilla JavaScript de animaciones de carga e interacciones al vuelo sin depender de librerías pesadas.</p>
                                     </div>
-                                    <div class="zig-zag-img"><img src="assets/bakeneko-responsive.jpg" alt="Versión Móvil"></div>
+                                    <div class="zig-zag-img"><img src="assets/bakeneko-responsive.jpg" alt="Móvil"></div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        </div> 
+                        
+                        <div class="live-preview-section">
+                            <h4>Demo Interactiva</h4>
+                            <p>Navega por el proyecto real sin salir del portfolio:</p>
+                            
+                            <div class="iframe-window">
+                                <div class="browser-header">
+                                    <span class="dot close"></span>
+                                    <span class="dot min"></span>
+                                    <span class="dot max"></span>
+                                </div>
+                                <iframe src="https://bakenekobakery.netlify.app/" title="Bakeneko Bakery Live Preview"></iframe>
+                            </div>
 
-                    <div id="detail-libro" class="project-case-study">
+                            <a href="https://bakenekobakery.netlify.app/" target="_blank" class="external-link-btn">
+                                Ver proyecto en pantalla completa ↗
+                            </a>
+                        </div>
+                    </div> <div id="detail-libro" class="project-case-study">
                         <div class="case-sidebar">
                             <div class="project-image-placeholder vertical-img case-main-img">
                                 <img src="assets/libro.jpg" alt="Natural Sciences" class="card-img">
                             </div>
                         </div>
                         <div class="case-content">
-                            <button class="back-btn" onclick="closeCaseStudy()">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-                                Volver a Proyectos
-                            </button>
                             <h3>Natural Sciences</h3>
                             <span class="case-tags">Adobe InDesign • Sistemas de Retículas • Tipografía</span>
                             
@@ -201,9 +207,7 @@
                     </div>
 
                 </div>
-            </div>
-
-            <div id="contact-content" class="content-block">
+            </div> <div id="contact-content" class="content-block">
                 <h2>Hablemos.</h2>
                 <p>Actualmente abierta a conversaciones profesionales interesantes. Si tienes un proyecto en mente, me encantaría conocerlo.</p>
                 
@@ -238,6 +242,12 @@
             <a class="soft-glitch-link" onclick="toggleSection('about', this)">Quién soy</a>
             <a class="soft-glitch-link" onclick="toggleSection('works', this)">Proyectos</a>
             <a class="soft-glitch-link" onclick="toggleSection('contact', this)">Contacto</a>
+        </nav>
+
+        <nav class="project-sub-menu">
+            <a id="sublink-tarantino" class="sub-link" onclick="toggleProjectDetail('tarantino')">Tarantino</a>
+            <a id="sublink-bakeneko" class="sub-link" onclick="toggleProjectDetail('bakeneko')">Bakeneko</a>
+            <a id="sublink-libro" class="sub-link" onclick="toggleProjectDetail('libro')">Ciencias</a>
         </nav>
 
     </div>
