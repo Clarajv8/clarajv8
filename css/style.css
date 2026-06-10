@@ -937,3 +937,132 @@ body {
 .lightbox-modal.active img {
     transform: scale(1);
 }
+
+/* =========================================================
+   📱 RESPONSIVE DESIGN (MÓVILES Y TABLETS PEQUEÑAS)
+   ========================================================= */
+@media (max-width: 768px) {
+    
+    .main-menu {
+        position: fixed;
+        top: 0; left: 0 !important;
+        transform: none !important;
+        width: 100vw;
+        flex-direction: row !important;
+        justify-content: center;
+        align-items: center !important;
+        gap: 1.5rem !important;
+        background-color: rgba(253, 253, 251, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 1.2rem 0;
+        z-index: 100;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    }
+
+    .soft-glitch-link {
+        font-size: 1.1rem !important;
+        letter-spacing: 0 !important;
+    }
+
+    .content-area,
+    #portfolio-container.case-study-active .content-area {
+        position: relative;
+        left: 5% !important;
+        width: 90% !important;
+        top: 0 !important;
+        transform: none !important;
+        margin-top: 100px; 
+        padding-bottom: 3rem;
+    }
+
+    #portfolio-container.case-study-active .project-sub-menu {
+        top: 70px;
+        gap: 1rem;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-top: 2vh;
+    }
+
+    .image-frame {
+        max-width: 260px;
+        margin: 0 auto;
+    }
+
+    .about-text-content {
+        text-align: center;
+    }
+
+    .projects-grid {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .project-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .case-header-block h3 {
+        font-size: 2.2rem;
+    }
+
+    .case-intro-row {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .case-intro-row .case-main-img {
+        max-width: 100%;
+        width: 100%;
+        aspect-ratio: auto;
+    }
+
+    .zig-zag-row, 
+    .zig-zag-row.reverse {
+        flex-direction: column !important; 
+        gap: 1.5rem;
+        margin-bottom: 4rem;
+    }
+
+    .zig-zag-text h4 {
+        font-size: 1.3rem;
+    }
+
+    .project-case-study {
+        max-height: 75vh;
+        padding-right: 0.5rem;
+    }
+
+    .interactive-gallery {
+        max-width: 100%;
+    }
+
+    .gallery-stack {
+        gap: 0.3rem; 
+    }
+
+    .stacked-card {
+        width: 16vw; 
+        max-width: 65px;
+        height: 16vw;
+        max-height: 65px;
+        border-width: 1px;
+    }
+
+    .stacked-card:hover {
+        transform: translateY(-8px) scale(1.3) rotate(0deg) !important;
+    }
+
+    .iframe-window {
+        aspect-ratio: 4/3;
+    }
+
+    .iframe-window.mobile-frame {
+        max-width: 280px;
+        aspect-ratio: 9/19;
+    }
+}
