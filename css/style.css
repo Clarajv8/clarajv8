@@ -939,102 +939,99 @@ body {
 }
 
 /* =========================================================
-   📱 RESPONSIVE DESIGN (MÓVILES Y TABLETS PEQUEÑAS)
+   📱 RESPONSIVE DESIGN CORREGIDO (MÓVILES Y TABLETS)
    ========================================================= */
 @media (max-width: 768px) {
     
     .main-menu {
-        position: fixed;
-        top: 0; left: 0 !important;
-        transform: none !important;
-        width: 100vw;
-        flex-direction: row !important;
-        justify-content: center;
+        width: 100%;
+        align-items: center;
+    }
+
+    #portfolio-container.layout-split .main-menu {
+        left: 50% !important; 
+        top: 8vh !important;
+        transform: translateX(-50%) !important;
+        flex-direction: row !important; 
+        gap: 1.2rem !important;
         align-items: center !important;
-        gap: 1.5rem !important;
-        background-color: rgba(253, 253, 251, 0.95);
-        backdrop-filter: blur(10px);
-        padding: 1.2rem 0;
-        z-index: 100;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.03);
     }
 
     .soft-glitch-link {
         font-size: 1.1rem !important;
         letter-spacing: 0 !important;
+        text-align: center;
     }
 
     .content-area,
     #portfolio-container.case-study-active .content-area {
-        position: relative;
         left: 5% !important;
         width: 90% !important;
-        top: 0 !important;
+        top: 16vh !important; 
         transform: none !important;
-        margin-top: 100px; 
-        padding-bottom: 3rem;
     }
 
-    #portfolio-container.case-study-active .project-sub-menu {
-        top: 70px;
-        gap: 1rem;
-        flex-wrap: wrap;
-        width: 100%;
+    .content-block {
+        max-height: 80vh;
+        overflow-y: auto; 
+        padding-bottom: 6rem; 
+        scrollbar-width: none; 
     }
 
     .about-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; 
         gap: 2rem;
-        margin-top: 2vh;
+        margin-top: 0;
     }
 
     .image-frame {
-        max-width: 260px;
-        margin: 0 auto;
+        max-width: 220px;
+        margin: 0 auto; 
     }
 
-    .about-text-content {
-        text-align: center;
+    #portfolio-container.case-study-active .main-menu {
+        top: 4vh !important; 
+    }
+
+    #portfolio-container.case-study-active .project-sub-menu {
+        top: 10vh !important;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    #portfolio-container.case-study-active .content-area {
+        top: 18vh !important;
     }
 
     .projects-grid {
         flex-direction: column;
-        gap: 3rem;
-    }
-
-    .project-card h3 {
-        font-size: 1.4rem;
-    }
-
-    .case-header-block h3 {
-        font-size: 2.2rem;
-    }
-
-    .case-intro-row {
-        flex-direction: column;
         gap: 2rem;
-    }
-
-    .case-intro-row .case-main-img {
-        max-width: 100%;
-        width: 100%;
-        aspect-ratio: auto;
-    }
-
-    .zig-zag-row, 
-    .zig-zag-row.reverse {
-        flex-direction: column !important; 
-        gap: 1.5rem;
-        margin-bottom: 4rem;
-    }
-
-    .zig-zag-text h4 {
-        font-size: 1.3rem;
+        padding-bottom: 4rem;
     }
 
     .project-case-study {
         max-height: 75vh;
-        padding-right: 0.5rem;
+        padding-right: 0; 
+    }
+
+    .case-header-block h3 {
+        font-size: 2rem;
+    }
+
+    .case-intro-row, 
+    .zig-zag-row, 
+    .zig-zag-row.reverse {
+        flex-direction: column !important; 
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .case-intro-row .case-main-img, 
+    .zig-zag-img {
+        max-width: 100%;
+        width: 100%;
     }
 
     .interactive-gallery {
@@ -1046,23 +1043,21 @@ body {
     }
 
     .stacked-card {
-        width: 16vw; 
-        max-width: 65px;
-        height: 16vw;
-        max-height: 65px;
+        width: 55px;
+        height: 55px;
         border-width: 1px;
     }
 
     .stacked-card:hover {
-        transform: translateY(-8px) scale(1.3) rotate(0deg) !important;
+        transform: translateY(-8px) scale(1.5) rotate(0deg) !important;
     }
 
     .iframe-window {
-        aspect-ratio: 4/3;
+        aspect-ratio: 4/3; 
     }
 
     .iframe-window.mobile-frame {
-        max-width: 280px;
+        max-width: 260px;
         aspect-ratio: 9/19;
     }
 }
