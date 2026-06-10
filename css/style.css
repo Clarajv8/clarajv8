@@ -939,14 +939,17 @@ body {
 }
 
 /* =========================================================
-   📱 RESPONSIVE DESIGN TOTALMENTE BLINDADO (SIN LAG NI DESBORDAMIENTOS)
+   📱 RESPONSIVE DESIGN 
    ========================================================= */
 @media (max-width: 768px) {
+    
     html, body {
         height: 100% !important;
-        width: 100vw !important;
-        overflow: hidden !important;
-        position: fixed;
+        width: 100% !important; 
+        max-width: 100% !important;
+        overflow-x: hidden !important; 
+        overflow-y: hidden !important;
+        position: fixed; 
     }
 
     #portfolio-container {
@@ -954,6 +957,19 @@ body {
         height: 100%;
         overflow: hidden;
         position: relative;
+    }
+
+    /* 🌟 EFECTO DE FOTO INVERTIDO EN MÓVIL */
+    .profile-photo {
+        filter: grayscale(0%) !important;
+    }
+
+    .image-frame:hover .profile-photo {
+        filter: grayscale(0%) !important; 
+    }
+
+    .profile-photo.bw-active {
+        filter: grayscale(100%) !important; 
     }
 
     .main-menu {
@@ -1015,7 +1031,7 @@ body {
 
     .content-block {
         max-height: 100%; 
-        overflow-y: auto;
+        overflow-y: auto; 
         padding-bottom: 4rem; 
         scrollbar-width: none; 
     }
