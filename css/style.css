@@ -296,9 +296,6 @@ body {
     transition: transform 0.5s cubic-bezier(0.25, 1, 0.4, 1);
 }
 
-.project-card:hover .card-img {
-    transform: scale(1.05); 
-}
 
 /* === TIPOGRAFÍA Y ESTRUCTURA DEL CASE STUDY === */
 .case-header {
@@ -346,7 +343,6 @@ body {
     height: 100%;
     object-fit: cover;
 }
-
 
 .project-image-placeholder.vertical-img {
     width: 100%;
